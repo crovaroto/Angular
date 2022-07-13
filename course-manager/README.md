@@ -1,6 +1,3 @@
-# Angular
-Repositório de projetos desenvolvidos com o usando a framework Angular.
-=======
 # CourseManager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
