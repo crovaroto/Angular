@@ -1,0 +1,18 @@
+<h1 [class.text-red]="textRed">Meu nome é {{ retornaNome() }}</h1>
+
+<img  [src]="imgUrl">
+
+<button (click)="clicou()" [attr.aria-label]="buttonText" [style.backgroundColor]="bgColor">{{buttonText}}</button>
+
+<input class="form-control" type="text" [(ngModel)]="textInput">
+<p class="text-default">{{ textInput }}</p>
+
+
+<app-button btnText="Cancelar" btnType="btn-danger" (clickChildren)="clicouNoFilho($event)"></app-button>
+
+<p>Testando o ciclo de vida Angular</p>
+<app-button btnText="Incremento" btnType="btn-success" (click)="incremento()"></app-button>
+<app-button btnText="Destruir Componente" btnType="btn-danger" (click)="destroyComponent()"></app-button>
+<app-life-cycle [number]="number" *ngIf="!destroy"></app-life-cycle>
+
+
