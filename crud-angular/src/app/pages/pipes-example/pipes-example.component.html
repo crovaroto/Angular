@@ -1,0 +1,46 @@
+<div class="form-group">
+  <label for="number">Number:</label>
+  <input type="text" [(ngModel)]="number" class="form-control" id="number">
+
+</div>
+
+<div class="">
+  <p>Sem formatação</p>
+  <p>{{ number }}</p>
+
+  <p>Com formatação</p>
+  <p>{{ number | number: '2.0-2'}}</p>
+
+  <p>Moeda</p>
+  <p>{{ number | currency: 'BRL'}}</p>
+
+  <p>Porcentagem</p>
+  <p>{{ number | percent}}</p>
+
+  <p> {{ text }}</p>
+
+  <p>Data de hoje</p>
+  <p>{{ date | date:'dd/MM/yyyy':'GMT-0300':'en-US' }}</p>
+
+  <p>Pipe JSon</p>
+  <p>{{pessoa | json}}</p>
+
+  <p>Pipe Slice</p>
+  <p>{{ text | slice:0:4}}</p>
+</div>
+<div class="container">
+  <div class="col">
+    <div class="rol-6">
+      <div class="form-group">
+        <label for="text">Print Pipe Test: </label>
+        <input type="text" name="text" id="text" #texto>
+        <button class="btn btn-primary" (click)="add(texto.value); texto.value = ''">Add</button>
+      </div>
+    </div>
+    <div class="row-6">
+      <h3>Lista formatada</h3>
+      <p>Tamanho da lista {{ nomes.length }}</p>
+      <p>{{ nomes | printList}}</p>
+    </div>
+  </div>
+</div>
